@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "lint": "tslint -t codeFrame -c tslint.json 'source/**/*.{ts,tsx,js}' 'tests/**/*.{ts,tsx,js}'",
-    "test": "run-s lint:* build",
+    "test": "run-s lint build",
     "clean": "rimraf distribution",
     "build": "npm run clean && webpack --mode=production",
     "watch": "webpack --mode=development --watch",
