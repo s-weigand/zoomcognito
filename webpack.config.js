@@ -11,7 +11,6 @@ module.exports = {
     'background/background': './source/background/background.ts',
     'options/options': ['./source/options/options.ts', './source/options/options.scss'],
     'context_menue/context_menue_entry': './source/context_menue/context_menue_entry.ts',
-    'sidebar/sidebar': './source/sidebar/sidebar.ts',
     'actions/option_action/add_option_action':
       './source/actions/option_action/add_option_action.ts',
   },
