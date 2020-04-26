@@ -15,7 +15,19 @@ Since this is all very concerning, but users are left with pretty much no choice
 
 ## Features
 
--
+### Implemented
+
+- Context menu entry to open zoom link in a private browser window
+- Zoom meeting url prefixing, with company/university subdomain
+- Blocking of the automatic zoom client download (deactivatable)(can't test this right now, since tu-berlin doesn't use it anymore)
+- Auto filling of the user name (**Needs rights to run in private window**)
+- Auto confirming of zoom user agreement (**Needs rights to run in private window**)
+
+### Planned
+
+- Bookmarking integration
+- Per meeting bookmark settings (i.e. url prefixing)
+- Zoom meeting link extraction
 
 ## Changelog
 
