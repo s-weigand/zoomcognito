@@ -8,7 +8,14 @@
   "icons": {
     "128": "icon-128x128.png"
   },
-  "permissions": ["clipboardWrite", "contextMenus", "storage"],
+  "permissions": [
+    "clipboardWrite",
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.zoom.us/*"
+  ],
   "browser_action": {
     "default_icon": {
       "64": "icon-128x128.png"
@@ -22,5 +29,11 @@
   },
   "background": {
     "scripts": ["background/background.js", "context_menue/context_menue_entry.js"]
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/auto_fill.js"],
+      "matches": ["*://*.zoom.us/wc/*"]
+    }
+  ]
 }

@@ -11,6 +11,7 @@ module.exports = {
     'background/background': './source/background/background.ts',
     'options/options': ['./source/options/options.ts', './source/options/options.scss'],
     'context_menue/context_menue_entry': './source/context_menue/context_menue_entry.ts',
+    'scripts/auto_fill': './source/scripts/auto_fill.ts',
   },
   output: {
     path: path.join(__dirname, 'distribution'),
@@ -21,7 +22,7 @@ module.exports = {
     extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json'],
     alias: {
       'webextension-polyfill-ts': path.resolve(
-        path.join(__dirname, 'node_modules', 'webextension-polyfill-ts'),
+        path.join(__dirname, 'node_modules', 'webextension-polyfill-ts')
       ),
     },
   },
