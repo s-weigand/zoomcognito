@@ -8,6 +8,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: npm install
-    - run: npm test
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm test
+      - name: Upload dist bundle
+        uses: actions/upload-artifact@v1
+        with:
+          name: built-extension
+          path: distribution
