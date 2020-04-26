@@ -25,6 +25,7 @@ Since this is all very concerning, but users are left with pretty much no choice
 
 ### Planned
 
+- Import/export settings
 - Bookmarking integration
 - Per meeting bookmark settings (i.e. url prefixing)
 - Zoom meeting link extraction
