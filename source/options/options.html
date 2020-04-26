@@ -1,39 +1,57 @@
 <!DOCTYPE html>
-<meta charset="utf-8" />
-<title>Options</title>
-<link rel="stylesheet" href="chrome://global/skin/in-content/common.css" />
-<link rel="stylesheet" href="options.css" />
-
-<form id="options-form" class="detail-view-container">
-  <h3>Color Previewer</h3>
-  <div class="color-picker">
-    <div class="color-inputs">
-      <label class="color-input">
-        <span>R</span>
-        <input type="range" min="0" max="255" name="colorRed" />
-        <input type="number" name="colorRed" min="0" max="255" />
-      </label>
-      <label class="color-input">
-        <span>G</span>
-        <input type="range" min="0" max="255" name="colorGreen" />
-        <input type="number" name="colorGreen" min="0" max="255" />
-      </label>
-      <label class="color-input">
-        <span>B</span>
-        <input type="range" min="0" max="255" name="colorBlue" />
-        <input type="number" name="colorBlue" min="0" max="255" />
-      </label>
-      <label>
-        <span>Username: </span>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZoomCongnito Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <form id="options-form" class="detail-view-container">
+      <h3>Global settings</h3>
+      <div class="default-option">
+        <span class="tooltip">
+          Username:
+          <span class="tooltiptext">
+            Name that will be shown for you in you zoom meeting.
+          </span>
+        </span>
         <input name="username" />
-      </label>
-      <label>
-        <span>Password: </span>
-        <input name="password" />
-      </label>
-    </div>
-    <div class="color-output"></div>
-  </div>
-</form>
+      </div>
+      <br />
+      <div class="default-option">
+        <span class="tooltip">
+          Auto accept user agreement:
+          <span class="tooltiptext">
+            Whether or not to accept the user agreement automatically.
+          </span>
+        </span>
+        <input type="checkbox" name="autoAcceptUserAgreement" />
+      </div>
+      <br />
+      <div class="default-option">
+        <span class="tooltip">
+          Default url prefix:
+          <span class="tooltiptext">
+            The url prefix you mostly use, because of your company or university (i.e. "tu-berlin"
+            for "tu-berlin.zoom.us"). This will be prepended to zoom urls, if not specified
+            differently.
+          </span>
+        </span>
+        <input name="zoomUrlPrefix" />
+      </div>
+      <br />
+      <div class="default-option">
+        <span class="tooltip">
+          Block zoom client download:
+          <span class="tooltiptext">
+            Whether or not to block the download of the zoom client.
+          </span>
+        </span>
+        <input id="blockClientDownload" type="checkbox" name="blockClientDownload" />
+      </div>
+    </form>
 
-<script src="options.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
