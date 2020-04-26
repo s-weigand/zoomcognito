@@ -1,3 +1,4 @@
+import { ImplementationError } from '../../source/lib/errors'
 import { generateZoomWebLink, isZoomMeetingUrl } from '../../source/lib/parsers'
 
 describe('testing lib/parsers', () => {
@@ -93,8 +94,10 @@ describe('testing lib/parsers', () => {
       'https://zoom.us/j',
       'https://zoom.us/wc/j',
     ])('Invalid url: %s', (invalidUrl) => {
-      const result = generateZoomWebLink(invalidUrl)
-      expect(result).toBe('')
+      const runFunction = () => {
+        generateZoomWebLink(invalidUrl)
+      }
+      expect(runFunction).toThrowError(ImplementationError)
     })
   })
 })

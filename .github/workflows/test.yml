@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install
-      - run: npm test:prod
+      - run: npm run test:prod
       - name: Upload dist bundle
         uses: actions/upload-artifact@v1
         with:

@@ -1,3 +1,5 @@
+import { ImplementationError } from './errors'
+
 /**
  * Determines if an url is valid, to generate a zoom link
  */
@@ -47,6 +49,7 @@ export const generateZoomWebLink = (validZoomUrl: string, urlPrefix: string = ''
     }
     return zoomWebLink
   } else {
-    throw Error(`The given url `)
+    throw new ImplementationError(`The given url:\n${validZoomUrl}\n
+    is not a valid zoom meeting url, make sure to check the url with 'isZoomMeetingUrl' before calling 'generateZoomWebLink'.`)
   }
 }
