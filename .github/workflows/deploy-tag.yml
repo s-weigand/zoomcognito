@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci
-      - run: npm test
+      - run: npm run test:prod
       - name: Update extension’s meta
         run: |
           export VER=$(echo "$GITHUB_REF" | sed -e 's/refs\/tags\///')
