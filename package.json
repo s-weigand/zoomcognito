@@ -54,7 +54,7 @@
     "rimraf": "^3.0.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "size-plugin": "^1.2.0",
+    "size-plugin": "^2.0.1",
     "terser-webpack-plugin": "^2.3.6",
     "ts-jest": "^25.4.0",
     "ts-loader": "^7.0.1",
