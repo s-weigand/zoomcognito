@@ -1,5 +1,7 @@
 ![ZoomCongnito icon banner](https://raw.githubusercontent.com/s-weigand/zoomcognito/master/assets/icon-banner.svg)
 
+[![codecov](https://codecov.io/gh/s-weigand/zoomcognito/branch/master/graph/badge.svg)](https://codecov.io/gh/s-weigand/zoomcognito)
+
 # ZoomCongnito
 
 This browser extension is an effort to make using zoom in the browser more comfortable and also help users to guard their privacy better (incognito/private window).
