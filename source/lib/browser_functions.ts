@@ -1,8 +1,8 @@
 import { browser } from 'webextension-polyfill-ts'
 
 export const openInIncognitoWindow = (url: string): void => {
-  browser.windows.create({ incognito: true, url }).catch(() => {
-    alert(`Unable to open ${url}`)
+  browser.windows.create({ incognito: true, url }).catch((error: Error) => {
+    alert(`Unable to open ${url}\n\n ${error}`)
   })
 }
 
@@ -18,7 +18,7 @@ export const blockZoomClientDownload = (blockClientDownload: boolean) => {
     browser.webRequest.onBeforeRequest.addListener(
       blockZoomClientDownloadListener,
       { urls: ['*://*.zoom.us/downloads/*'] },
-      ['blocking']
+      ['blocking'],
     )
   }
 }

@@ -32,6 +32,10 @@ Since this is all very concerning, but users are left with pretty much no choice
 - Per meeting bookmark settings (i.e. url prefixing)
 - Zoom meeting link extraction
 
+## Configuration
+
+For FireFox rights to run in private window, are mandatory to open a private window.
+
 ## Changelog
 
 To see the changes between versions have a look at the [changelog](https://github.com/s-weigand/zoomcognito/blob/master/CHANGELOG.md)
