@@ -66,7 +66,7 @@
   },
   "dependencies": {
     "webext-options-sync": "^1.2.3",
-    "webextension-polyfill-ts": "^0.14.0",
+    "webextension-polyfill-ts": "^0.15.0",
     "xregexp": "^4.3.0"
   }
 }
