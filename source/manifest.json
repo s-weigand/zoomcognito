@@ -1,7 +1,7 @@
 {
   "name": "ZoomCongnito",
   "version": "0.1.0",
-  "description": "An awesome new browser extension",
+  "description": "Browser extension to manage zoom meetings with the webclient",
   "homepage_url": "https://github.com/s-weigand/zoomcognito",
   "manifest_version": 2,
   "minimum_chrome_version": "74",
