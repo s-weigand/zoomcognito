@@ -8,14 +8,7 @@
   "icons": {
     "128": "icon-128x128.png"
   },
-  "permissions": [
-    "clipboardWrite",
-    "contextMenus",
-    "storage",
-    "webRequest",
-    "webRequestBlocking",
-    "*://*.zoom.us/*"
-  ],
+  "permissions": ["contextMenus", "storage", "webRequest", "webRequestBlocking", "*://*.zoom.us/*"],
   "options_ui": {
     "chrome_style": true,
     "page": "options/options.html"
