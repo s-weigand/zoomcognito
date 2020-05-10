@@ -15,6 +15,14 @@ Which is why many quickly adapted [Zoom](https://zoom.us/) as their solution of 
 
 Since this is all very concerning, but users are left with pretty much no choice, but to use it anyway, this extension comes into play, as an attempt to at least minimize the data which is shared with zoom.
 
+## Install
+
+[link-amo]: https://addons.mozilla.org/en-US/firefox/addon/zoomcongnito
+[link-cws]: https://chrome.google.com/webstore/detail/zoomcongnito/ojacfcdohhffgjllblgedhkoohkmhopb
+
+- [**Chrome** extension][link-cws] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/ojacfcdohhffgjllblgedhkoohkmhopb.svg?label=%20">][link-cws]
+- [**Firefox** add-on][link-amo] [<img valign="middle" src="https://img.shields.io/amo/v/zoomcongnito.svg?label=%20">][link-amo]
+
 ## Features
 
 ### Implemented
