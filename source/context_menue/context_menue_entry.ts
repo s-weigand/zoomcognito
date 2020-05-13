@@ -7,26 +7,26 @@ import optionsStorage from '../options/options-storage'
 browser.contextMenus.create({
   id: 'zoomcognito-context-open-incognito',
   title: 'Open zoom in incognito windows',
-  contexts: ['link'],
+  contexts: ['link', 'selection'],
 })
 
 // not working in firefox
 const currentUrlIcognito = (info: Menus.OnClickData, _tab?: Tabs.Tab | undefined) => {
-  const linkUrl = info.linkUrl
-  if (linkUrl !== undefined) {
-    if (isZoomMeetingUrl(linkUrl) === true) {
+  const url = info.linkUrl !== undefined ? info.linkUrl : info.selectionText
+  if (url !== undefined) {
+    if (isZoomMeetingUrl(url) === true) {
       optionsStorage
         .getAll()
         .then((response) => {
           const urlPrefix = response.zoomUrlPrefix
-          const zoomWebLink = generateZoomWebLink(linkUrl, urlPrefix)
+          const zoomWebLink = generateZoomWebLink(url, urlPrefix)
           openInIncognitoWindow(zoomWebLink)
         })
         .catch(() => {
           alert('Error getting the value of the option zoomUrlPrefix.')
         })
     } else {
-      alert(`The given url isn't a proper zoom meeting url:\n ${linkUrl}`)
+      alert(`The given url isn't a proper zoom meeting url:\n ${url}`)
     }
   } else {
     alert("Couldn't determine url.")
