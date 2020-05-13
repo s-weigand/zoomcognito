@@ -8,7 +8,7 @@ import { ImplementationError } from './errors'
 export const isZoomMeetingUrl = (url: string): boolean => {
   const zoomMeetingUrlRegex = XRegExp(
     `^https?://
-    (sub-domain\\.)?
+    ((?<subDomain>.*)\\.)?
     zoom\\.us/
     (wc/)?
     (?<mode1>(j|s|join|start)/)?
