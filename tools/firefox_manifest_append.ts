@@ -17,7 +17,6 @@ const updateManifestFireFox = () => {
       },
     },
   }
-  originalManifest.permissions = [...originalManifest.permissions, 'privacy']
   const updatedManifest = { ...originalManifest, ...fireFoxSpecifficSettings }
   fs.writeFileSync(distManifestPath, JSON.stringify(updatedManifest))
 }
