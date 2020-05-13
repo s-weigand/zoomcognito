@@ -36,20 +36,20 @@ jobs:
           name: built-extension-firefox
           path: distribution
 
-  # deploy-to-chrome:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/download-artifact@v1
-  #       with:
-  #         name: built-extension-chrome
-  #         path: distribution
-  #     - run: cd distribution && npx chrome-webstore-upload-cli upload --auto-publish
-  #       env:
-  #         EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
-  #         CLIENT_ID: ${{ secrets.CLIENT_ID }}
-  #         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-  #         REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+  deploy-to-chrome:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v1
+        with:
+          name: built-extension-chrome
+          path: distribution
+      - run: cd distribution && npx chrome-webstore-upload-cli upload --auto-publish
+        env:
+          EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
 
   deploy-to-firefox:
     needs: build
