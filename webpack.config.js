@@ -22,7 +22,7 @@ module.exports = {
     extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json'],
     alias: {
       'webextension-polyfill-ts': path.resolve(
-        path.join(__dirname, 'node_modules', 'webextension-polyfill-ts')
+        path.join(__dirname, 'node_modules', 'webextension-polyfill-ts'),
       ),
     },
   },
@@ -56,13 +56,17 @@ module.exports = {
   },
   plugins: [
     new SizePlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: '**/*',
-        context: 'source',
-        ignore: ['*.js', '*.ts', '*.scss'],
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: '**/*',
+          context: 'source',
+          globOptions: {
+            ignore: ['**/*.js', '**/*.ts', '**/*.tsx', '**/*.scss'],
+          },
+        },
+      ],
+    }),
   ],
   optimization: {
     minimizer: [
