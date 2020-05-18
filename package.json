@@ -5,7 +5,7 @@
     "test": "jest --coverage",
     "test:prod": "run-s test lint build",
     "clean": "rimraf distribution",
-    "update_manifest_firefox":"npx ts-node tools/firefox_manifest_append.ts",
+    "update_manifest_firefox": "npx ts-node tools/firefox_manifest_append.ts",
     "build": "npm run clean && webpack --mode=production",
     "watch": "webpack --mode=development --watch",
     "version": "dot-json distribution/manifest.json version $VER",
