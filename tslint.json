@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-config-standard", "tslint-config-prettier", "tslint:latest"],
+  "extends": ["tslint-config-standard", "tslint-config-prettier", "tslint:latest", "tslint-react"],
   "rules": {
     "jsx-wrap-multiline": false,
     "trailing-comma": [
