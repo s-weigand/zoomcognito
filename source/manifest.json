@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/auto_fill.js"],
+      "js": ["content_scripts/auto_fill.js"],
       "matches": ["*://*.zoom.us/wc/*"]
     }
   ]

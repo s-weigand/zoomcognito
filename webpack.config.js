@@ -11,7 +11,7 @@ module.exports = {
     'background/background': './source/background/background.ts',
     'options/options': ['./source/options/options.ts', './source/options/options.scss'],
     'context_menue/context_menue_entry': './source/context_menue/context_menue_entry.ts',
-    'scripts/auto_fill': './source/scripts/auto_fill.ts',
+    'content_scripts/auto_fill': './source/content_scripts/auto_fill.ts',
   },
   output: {
     path: path.join(__dirname, 'distribution'),
