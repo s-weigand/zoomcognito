@@ -31,11 +31,6 @@
       "source/**/*.{js,ts,tsx}"
     ]
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.7.0",
     "@types/jest": "^26.0.14",
