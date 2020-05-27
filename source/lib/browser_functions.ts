@@ -1,8 +1,8 @@
 import { Tabs, browser } from 'webextension-polyfill-ts'
 
-export const openInIncognitoWindow = (url: string): void => {
+export const openInIncognitoWindow = (url: string, _tab: Tabs.Tab | undefined): void => {
   browser.windows.create({ incognito: true, url }).catch((error: Error) => {
-    alert(`Unable to open ${url}\n\n ${error}`)
+    sendErrorToDialog(`Unable to open ${url}\n\n ${error}`, _tab)
   })
 }
 
