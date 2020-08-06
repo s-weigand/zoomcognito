@@ -7,6 +7,9 @@ import optionsStorage from '../options/options-storage'
 browser.contextMenus.create({
   id: 'zoomcognito-context-open-incognito',
   title: 'Open zoom in incognito windows',
+  icons: {
+    '16': 'icons/zoomcognito-icon.svg',
+  },
   contexts: ['link', 'selection'],
 })
 

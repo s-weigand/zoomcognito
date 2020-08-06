@@ -3,6 +3,16 @@ const SizePlugin = require('size-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
+const relIconSourcePaths = ['assets/zoomcognito-icon.svg']
+
+const iconCopyConditions = []
+for (relIconSourcePath of relIconSourcePaths) {
+  iconCopyConditions.push({
+    from: relIconSourcePath,
+    to: path.posix.join(__dirname, 'distribution', 'icons', '[name].[ext]'),
+  })
+}
+
 module.exports = {
   devtool: 'source-map',
   stats: 'errors-only',
@@ -63,9 +73,10 @@ module.exports = {
           from: '**/*',
           context: 'source',
           globOptions: {
-            ignore: ['**/*.js', '**/*.ts', '**/*.tsx', '**/*.scss'],
+            ignore: ['**/*.js', '**/*.ts', '**/*.tsx', '**/*.scss', '**/*.svg'],
           },
         },
+        ...iconCopyConditions,
       ],
     }),
   ],

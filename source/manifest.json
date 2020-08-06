@@ -6,7 +6,11 @@
   "manifest_version": 2,
   "minimum_chrome_version": "74",
   "icons": {
-    "128": "icon-128x128.png"
+    "16": "icons/zoomcognito-icon.svg",
+    "32": "icons/zoomcognito-icon.svg",
+    "48": "icons/zoomcognito-icon.svg",
+    "96": "icons/zoomcognito-icon.svg",
+    "128": "icons/zoomcognito-icon.svg"
   },
   "permissions": [
     "activeTab",
@@ -33,5 +37,5 @@
       "matches": ["*://*/*"]
     }
   ],
-  "web_accessible_resources": ["icon-128x128.png"]
+  "web_accessible_resources": ["**/*.svg"]
 }
