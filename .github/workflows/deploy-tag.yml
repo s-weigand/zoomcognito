@@ -3,14 +3,14 @@ name: Deployment
 
 on:
   schedule:
-    - cron: "31 13 * * 3"
+    - cron: '31 13 * * 3'
   push:
     tags:
-      - "20.*"
-      - "21.*"
-      - "22.*"
-      - "23.*"
-      - "24.*"
+      - '20.*'
+      - '21.*'
+      - '22.*'
+      - '23.*'
+      - '24.*'
 
 jobs:
   Build:
@@ -70,6 +70,5 @@ jobs:
           path: distribution
       - run: cd distribution && npx web-ext-submit
         env:
-          WEB_EXT_ID: ${{ secrets.WEB_EXT_ID }}
           WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
           WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
