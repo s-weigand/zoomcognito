@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.7.0",
-    "@types/jest": "^26.0.12",
+    "@types/jest": "^26.0.13",
     "@types/xregexp": "^4.3.0",
     "chrome-webstore-upload-cli": "^1.2.0",
     "copy-webpack-plugin": "^6.1.0",
