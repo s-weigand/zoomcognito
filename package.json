@@ -51,7 +51,7 @@
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "size-plugin": "^2.0.1",
-    "terser-webpack-plugin": "^4.2.0",
+    "terser-webpack-plugin": "^4.2.1",
     "ts-jest": "^25.5.1",
     "ts-loader": "^8.0.3",
     "ts-node": "^9.0.0",
