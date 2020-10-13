@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import { ImplementationError } from '../../source/lib/errors'
 import { generateZoomWebLink, isZoomMeetingUrl } from '../../source/lib/parsers'
 
