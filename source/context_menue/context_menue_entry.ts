@@ -4,14 +4,30 @@ import { openInIncognitoWindow, sendErrorToDialog } from '../lib/browser_functio
 import { generateZoomWebLink, isZoomMeetingUrl } from '../lib/parsers'
 import optionsStorage from '../options/options-storage'
 
-browser.contextMenus.create({
-  id: 'zoomcognito-context-open-incognito',
-  title: 'Open zoom in incognito windows',
-  icons: {
-    '16': 'icons/zoomcognito-icon.svg',
-  },
-  contexts: ['link', 'selection'],
-})
+/**
+ * Solution suggested by glazou
+ * http://www.glazman.org/weblog/dotclear/index.php?post/2018/06/07/Browser-detection-inside-a-WebExtension
+ */
+const removeIconsOnChrome = (
+  contextMenueProps: Menus.CreateCreatePropertiesType,
+): Menus.CreateCreatePropertiesType => {
+  const extensionUrl = browser.extension.getURL('/')
+  if (extensionUrl.startsWith('chrome')) {
+    delete contextMenueProps.icons
+  }
+  return contextMenueProps
+}
+
+browser.contextMenus.create(
+  removeIconsOnChrome({
+    id: 'zoomcognito-context-open-incognito',
+    title: 'Open zoom in incognito windows',
+    icons: {
+      '16': 'icons/zoomcognito-icon.svg',
+    },
+    contexts: ['link', 'selection'],
+  }),
+)
 
 const openZoomMeetingUrlIcognito = (info: Menus.OnClickData, _tab?: Tabs.Tab | undefined) => {
   const url = info.linkUrl !== undefined ? info.linkUrl : info.selectionText
