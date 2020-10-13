@@ -3,7 +3,7 @@ const SizePlugin = require('size-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-const relIconSourcePaths = ['assets/zoomcognito-icon.svg']
+const relIconSourcePaths = ['assets/zoomcognito-icon.svg', 'assets/icon-128x128.png']
 
 const iconCopyConditions = []
 for (relIconSourcePath of relIconSourcePaths) {
