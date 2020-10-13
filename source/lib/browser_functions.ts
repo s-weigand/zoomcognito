@@ -10,7 +10,7 @@ export const blockZoomClientDownloadListener = (_details: any) => {
   return { cancel: true }
 }
 
-export const blockZoomClientDownload = (blockClientDownload: boolean) => {
+export const blockZoomClientDownload = (blockClientDownload: boolean): void => {
   if (browser.webRequest.onBeforeRequest.hasListener(blockZoomClientDownloadListener)) {
     browser.webRequest.onBeforeRequest.removeListener(blockZoomClientDownloadListener)
   }
@@ -23,7 +23,7 @@ export const blockZoomClientDownload = (blockClientDownload: boolean) => {
   }
 }
 
-export const sendErrorToDialog = (message: string, tab: Tabs.Tab | undefined) => {
+export const sendErrorToDialog = (message: string, tab: Tabs.Tab | undefined): void => {
   if (tab !== undefined) {
     const tabId = tab.id as number
     browser.tabs.sendMessage(tabId, { type: 'error', message }).catch((error: Error) => {
