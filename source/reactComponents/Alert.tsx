@@ -12,11 +12,11 @@ import { browser } from 'webextension-polyfill-ts'
 
 import { DialogProps } from '../content_scripts/modals'
 
-interface AlertDialogProps extends DialogProps {
+export interface AlertDialogProps extends DialogProps {
   closeDialog: () => void
 }
 
-export default function AlertDialog(props: AlertDialogProps) {
+export function AlertDialog(props: AlertDialogProps) {
   const [open, setOpen] = React.useState(true)
 
   const { closeDialog, title, message } = props

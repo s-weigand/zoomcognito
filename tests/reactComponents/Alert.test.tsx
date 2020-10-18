@@ -3,13 +3,13 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import Alert from '../../source/reactComponents/Alert'
+import { AlertDialog } from '../../source/reactComponents/Alert'
 
 it('Alert Component', () => {
   const closeDialogMock = jest.fn()
 
   const { getByRole, getByText } = render(
-    <Alert {...{ closeDialog: closeDialogMock, title: 'testTitle', message: 'testMsg' }} />,
+    <AlertDialog {...{ closeDialog: closeDialogMock, title: 'testTitle', message: 'testMsg' }} />,
   )
 
   expect(getByRole('heading').textContent).toBe('testTitle')
