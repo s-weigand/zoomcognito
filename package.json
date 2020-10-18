@@ -30,7 +30,7 @@
       "/tests/"
     ],
     "collectCoverageFrom": [
-      "source/**/*.{js,ts,tsx}"
+      "source/**/{!(index),}.{js,ts,tsx}"
     ]
   },
   "devDependencies": {
