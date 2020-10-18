@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 
 import { AlertDialog } from '../../source/reactComponents/Alert'
 
-it('Alert Component', () => {
+it('AlertDialog Component', () => {
   const closeDialogMock = jest.fn()
 
   const { getByRole, getByText } = render(

@@ -39,7 +39,7 @@ const DummyPromise = (...args: any[]) => {
 //   ...test_data_no_icon,
 // }
 
-describe('test browser_functions', () => {
+describe('Browser Functions', () => {
   beforeAll(() => {
     jest
       .spyOn(browser.tabs, 'sendMessage')

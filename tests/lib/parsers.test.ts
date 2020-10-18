@@ -4,7 +4,7 @@
 import { ImplementationError } from '../../source/lib/errors'
 import { generateZoomWebLink, isZoomMeetingUrl } from '../../source/lib/parsers'
 
-describe('testing lib/parsers', () => {
+describe('Parsers', () => {
   describe('isZoomUrl', () => {
     it.each([
       'https://zoom.us/wc/join/12345',
