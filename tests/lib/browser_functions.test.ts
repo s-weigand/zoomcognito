@@ -1,7 +1,12 @@
-import { Tabs, browser } from 'webextension-polyfill-ts'
+import {
+  // Menus,
+  Tabs,
+  browser,
+} from 'webextension-polyfill-ts'
 
 import {
   blockZoomClientDownloadListener,
+  // removeIconsOnChrome,
   sendErrorToDialog,
 } from '../../source/lib/browser_functions'
 
@@ -21,6 +26,18 @@ const DummyPromise = (...args: any[]) => {
     }),
   )
 }
+
+// const test_data_no_icon = {
+//   id: 'test',
+//   title: 'testTitle',
+// }
+
+// const test_data_icon = {
+//   icons: {
+//     '16': 'test/icon',
+//   },
+//   ...test_data_no_icon,
+// }
 
 describe('test browser_functions', () => {
   beforeAll(() => {
@@ -50,4 +67,18 @@ describe('test browser_functions', () => {
     sendErrorToDialog('test_msg', undefined)
     expect(browser.tabs.sendMessage).not.toHaveBeenCalled()
   })
+  // it.each([
+  //   ['chrome', test_data_icon, test_data_no_icon],
+  //   ['moz', test_data_icon, test_data_icon],
+  // ])(
+  //   'removeIconsOnChrome: for browser %s',
+  //   (
+  //     browserName: string,
+  //     contextProps: Menus.CreateCreatePropertiesType,
+  //     expected: Menus.CreateCreatePropertiesType,
+  //   ) => {
+  //     jest.spyOn(browser.extension, 'getURL').mockImplementation((_path: string) => browserName)
+  //     expect(removeIconsOnChrome(contextProps)).toBe(expected)
+  //   },
+  // )
 })

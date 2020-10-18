@@ -1,22 +1,12 @@
 import { Menus, Tabs, browser } from 'webextension-polyfill-ts'
 
-import { openInIncognitoWindow, sendErrorToDialog } from '../lib/browser_functions'
+import {
+  openInIncognitoWindow,
+  removeIconsOnChrome,
+  sendErrorToDialog,
+} from '../lib/browser_functions'
 import { generateZoomWebLink, isZoomMeetingUrl } from '../lib/parsers'
 import optionsStorage from '../options/options-storage'
-
-/**
- * Solution suggested by glazou
- * http://www.glazman.org/weblog/dotclear/index.php?post/2018/06/07/Browser-detection-inside-a-WebExtension
- */
-const removeIconsOnChrome = (
-  contextMenueProps: Menus.CreateCreatePropertiesType,
-): Menus.CreateCreatePropertiesType => {
-  const extensionUrl = browser.extension.getURL('/')
-  if (extensionUrl.startsWith('chrome')) {
-    delete contextMenueProps.icons
-  }
-  return contextMenueProps
-}
 
 browser.contextMenus.create(
   removeIconsOnChrome({
