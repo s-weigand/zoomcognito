@@ -36,7 +36,7 @@ export function AlertDialog(props: AlertDialogProps) {
       >
         <DialogTitle id="alert-dialog-title">
           <img
-            style={{ width: '1em', marginRight: '1em' }}
+            style={{ width: '1.5em', marginRight: '.5em', verticalAlign: 'text-bottom' }}
             src={browser.runtime.getURL('icons/zoomcognito-icon.svg')}
             alt="ZoomCognitoIcon"
           />
