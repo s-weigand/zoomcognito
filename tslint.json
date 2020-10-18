@@ -17,6 +17,7 @@
     "max-classes-per-file": [false, 1],
     "interface-name": [true, "never-prefix"],
     "no-submodule-imports": false,
+    "no-implicit-dependencies": [true, "dev"],
     "ordered-imports": [
       true,
       {
