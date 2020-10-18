@@ -6,9 +6,16 @@
   "manifest_version": 2,
   "minimum_chrome_version": "74",
   "icons": {
-    "128": "icon-128x128.png"
+    "128": "icons/icon-128x128.png"
   },
-  "permissions": ["contextMenus", "storage", "webRequest", "webRequestBlocking", "*://*.zoom.us/*"],
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.zoom.us/*"
+  ],
   "options_ui": {
     "chrome_style": true,
     "page": "options/options.html"
@@ -18,8 +25,13 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/auto_fill.js"],
+      "js": ["content_scripts/auto_fill.js"],
       "matches": ["*://*.zoom.us/wc/*"]
+    },
+    {
+      "js": ["content_scripts/modals.js"],
+      "matches": ["*://*/*"]
     }
-  ]
+  ],
+  "web_accessible_resources": ["**/*.svg", "**/*.png"]
 }

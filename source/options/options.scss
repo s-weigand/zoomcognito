@@ -37,3 +37,10 @@ html {
 input {
   margin-left: 1rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #424242;
+    color: #fcfcfc;
+  }
+}

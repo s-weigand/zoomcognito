@@ -9,7 +9,7 @@ optionsStorage
     blockZoomClientDownload(response.blockClientDownload)
   })
   .catch(() => {
-    alert('Error blocking Zoom client download.')
+    console.log('Error initializing blocking ofZoom client download.')
   })
 
 const messageListener = (data: any) => {

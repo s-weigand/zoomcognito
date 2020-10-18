@@ -3,6 +3,16 @@ const SizePlugin = require('size-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
+const relIconSourcePaths = ['assets/zoomcognito-icon.svg', 'assets/icon-128x128.png']
+
+const iconCopyConditions = []
+for (relIconSourcePath of relIconSourcePaths) {
+  iconCopyConditions.push({
+    from: relIconSourcePath,
+    to: path.posix.join(__dirname, 'distribution', 'icons', '[name].[ext]'),
+  })
+}
+
 module.exports = {
   devtool: 'source-map',
   stats: 'errors-only',
@@ -11,7 +21,8 @@ module.exports = {
     'background/background': './source/background/background.ts',
     'options/options': ['./source/options/options.ts', './source/options/options.scss'],
     'context_menue/context_menue_entry': './source/context_menue/context_menue_entry.ts',
-    'scripts/auto_fill': './source/scripts/auto_fill.ts',
+    'content_scripts/auto_fill': './source/content_scripts/auto_fill.ts',
+    'content_scripts/modals': './source/content_scripts/modals.tsx',
   },
   output: {
     path: path.join(__dirname, 'distribution'),
@@ -62,9 +73,10 @@ module.exports = {
           from: '**/*',
           context: 'source',
           globOptions: {
-            ignore: ['**/*.js', '**/*.ts', '**/*.tsx', '**/*.scss'],
+            ignore: ['**/*.js', '**/*.ts', '**/*.tsx', '**/*.scss', '**/*.svg'],
           },
         },
+        ...iconCopyConditions,
       ],
     }),
   ],

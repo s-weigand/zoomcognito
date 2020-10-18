@@ -2,20 +2,23 @@
   "private": true,
   "scripts": {
     "lint": "tslint -t codeFrame -c tslint.json 'source/**/*.{ts,tsx,js}' 'tests/**/*.{ts,tsx,js}'",
-    "test": "jest --coverage",
+    "test": "jest --coverage --verbose",
     "test:prod": "run-s test lint build",
     "clean": "rimraf distribution",
     "update_manifest_firefox": "npx ts-node tools/firefox_manifest_append.ts",
-    "build": "npm run clean && webpack --mode=production",
-    "watch": "webpack --mode=development --watch",
+    "build": "run-s clean && webpack --mode=production",
+    "watch": "run-s clean && webpack --mode=development --watch",
     "version": "dot-json distribution/manifest.json version $VER",
     "release": "VER=$(daily-version); git tag -a \"$VER\" -m \"Release version $VER\""
   },
   "jest": {
+    "preset": "ts-jest",
+    "setupFiles": [
+      "jest-webextension-mock"
+    ],
     "transform": {
-      ".(ts|tsx)": "ts-jest"
+      "\\.(ts|tsx)$": "ts-jest"
     },
-    "testEnvironment": "jsdom",
     "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": [
       "ts",
@@ -27,17 +30,17 @@
       "/tests/"
     ],
     "collectCoverageFrom": [
-      "source/**/*.{js,ts,tsx}"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
+      "source/**/{!(index),}.{js,ts,tsx}"
     ]
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.7.0",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.8",
     "@types/jest": "^26.0.14",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
     "@types/xregexp": "^4.3.0",
     "chrome-webstore-upload-cli": "^1.2.0",
     "copy-webpack-plugin": "^6.2.1",
@@ -45,6 +48,7 @@
     "dot-json": "^1.2.1",
     "file-loader": "^6.1.1",
     "jest": "^25.5.4",
+    "jest-webextension-mock": "^3.6.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
@@ -58,6 +62,7 @@
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^9.0.0",
+    "tslint-react": "^5.0.0",
     "typescript": "^3.9.7",
     "web-ext": "^5.2.0",
     "web-ext-submit": "^5.1.0",
@@ -65,6 +70,9 @@
     "webpack-cli": "^4.0.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.14",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "webext-options-sync": "^2.0.0",
     "webextension-polyfill-ts": "^0.20.0",
     "xregexp": "^4.3.0"
