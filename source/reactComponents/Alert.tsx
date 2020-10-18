@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { ThemeProvider } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -11,6 +10,7 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import { browser } from 'webextension-polyfill-ts'
 
 import { DialogProps } from '../content_scripts/modals'
+import { getTheme } from './utils'
 
 export interface AlertDialogProps extends DialogProps {
   closeDialog: () => void
@@ -25,20 +25,9 @@ export function AlertDialog(props: AlertDialogProps) {
     setOpen(false)
     closeDialog()
   }
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
-
-  const theme = React.useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          type: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  )
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={getTheme()}>
       <Dialog
         open={open}
         onClose={handleClose}

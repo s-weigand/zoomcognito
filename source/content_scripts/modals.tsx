@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { browser } from 'webextension-polyfill-ts'
 
-import { AlertDialog } from '../reactComponents/Alert'
+import { AlertDialog } from '../reactComponents'
 
 export interface DialogProps {
   title: string
