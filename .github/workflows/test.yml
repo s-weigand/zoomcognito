@@ -6,16 +6,21 @@ on:
 
 jobs:
   test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
-      - run: npm run test:prod
+      - name: 'Install dependencies'
+        run: npm ci
+      - name: Run linting and Tests
+        run: npm run test:prod
       - name: Upload dist bundle
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: test-build
           path: distribution
+      - name: Run web-ext lint
+        run: npm run lint:web-ext
       - name: Codecov Upload
         uses: codecov/codecov-action@v1
         with:

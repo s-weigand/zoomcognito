@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "lint:web-ext": "run-s update_manifest_firefox && web-ext lint -s distribution",
     "lint": "tslint -t codeFrame -c tslint.json 'source/**/*.{ts,tsx,js}' 'tests/**/*.{ts,tsx,js}'",
     "test": "jest --coverage --verbose",
     "test:prod": "run-s test lint build",
