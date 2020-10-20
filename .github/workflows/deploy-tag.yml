@@ -4,6 +4,7 @@ name: Deployment
 on:
   schedule:
     - cron: '31 13 * * 3'
+  workflow_dispatch:
   push:
     tags:
       - '20.*'
@@ -19,8 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install
-      - run: npm run test:prod # This includes the build
+      - name: 'Install dependencies'
+        run: npm ci
+      - name: Run linting and Tests
+        run: npm run test:prod # This includes the build
       - uses: fregante/daily-version-action@v1
         name: Create tag if necessary
         id: daily-version
