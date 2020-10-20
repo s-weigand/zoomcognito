@@ -1,12 +1,12 @@
-![ZoomCongnito icon banner](https://raw.githubusercontent.com/s-weigand/zoomcognito/master/assets/icon-banner.svg)
+![ZoomCongnito icon banner](https://raw.githubusercontent.com/s-weigand/zoomcognito/main/assets/icon-banner.svg)
 
-[![codecov](https://codecov.io/gh/s-weigand/zoomcognito/branch/master/graph/badge.svg)](https://codecov.io/gh/s-weigand/zoomcognito)
+[![codecov](https://codecov.io/gh/s-weigand/zoomcognito/branch/main/graph/badge.svg)](https://codecov.io/gh/s-weigand/zoomcognito)
 
 # ZoomCongnito
 
 This browser extension is an effort to make using zoom in the browser more comfortable and also help users to guard their privacy better (incognito/private window).
 
-![ZoomCongnito icon makeup banner](https://raw.githubusercontent.com/s-weigand/zoomcognito/master/assets/combi-banner.svg)
+![ZoomCongnito icon makeup banner](https://raw.githubusercontent.com/s-weigand/zoomcognito/main/assets/combi-banner.svg)
 
 ## Background
 
@@ -51,7 +51,7 @@ For FireFox rights to run in private window, are mandatory to open a private win
 
 ## Changelog
 
-To see the changes between versions have a look at the [changelog](https://github.com/s-weigand/zoomcognito/blob/master/CHANGELOG.md)
+To see the changes between versions have a look at the [changelog](https://github.com/s-weigand/zoomcognito/blob/main/CHANGELOG.md)
 
 ## Credits
 
@@ -61,5 +61,5 @@ As can be seen above the logo was derived as a combination of two existing image
 
 Namely:
 
-- [zoom-icon.svg](https://github.com/s-weigand/zoomcognito/blob/master/assets/zoom-icon.svg) created by [Papirus Development Team](https://github.com/PapirusDevelopmentTeam) and licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
-- [Incognito.svg](https://github.com/s-weigand/zoomcognito/blob/master/assets/Incognito.svg) created by [Roundicons.com](https://www.roundicons.com) and licensed under [CC Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+- [zoom-icon.svg](https://github.com/s-weigand/zoomcognito/blob/main/assets/zoom-icon.svg) created by [Papirus Development Team](https://github.com/PapirusDevelopmentTeam) and licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
+- [Incognito.svg](https://github.com/s-weigand/zoomcognito/blob/main/assets/Incognito.svg) created by [Roundicons.com](https://www.roundicons.com) and licensed under [CC Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
