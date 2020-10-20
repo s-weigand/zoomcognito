@@ -20,8 +20,13 @@ Since this is all very concerning, but users are left with pretty much no choice
 [link-amo]: https://addons.mozilla.org/en-US/firefox/addon/zoomcongnito
 [link-cws]: https://chrome.google.com/webstore/detail/zoomcongnito/ojacfcdohhffgjllblgedhkoohkmhopb
 
-- [**Chrome** extension][link-cws] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/ojacfcdohhffgjllblgedhkoohkmhopb.svg?label=%20">][link-cws]
-- [**Firefox** add-on][link-amo] [<img valign="middle" src="https://img.shields.io/amo/v/zoomcongnito.svg?label=%20">][link-amo]
+- [<img valign="center" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg" width=16>
+  **Chrome** extension
+  <img valign="middle" src="https://img.shields.io/chrome-web-store/v/ojacfcdohhffgjllblgedhkoohkmhopb.svg?label=%20">
+  ][link-cws]
+- [<img valign="center" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" width=16>
+  **Firefox** add-on
+  <img valign="middle" src="https://img.shields.io/amo/v/zoomcongnito.svg?label=%20">][link-amo]
 
 ## Features
 
