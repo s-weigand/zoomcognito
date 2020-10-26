@@ -75,7 +75,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "webext-options-sync": "^2.0.0",
-    "webextension-polyfill-ts": "^0.20.0",
+    "webextension-polyfill-ts": "^0.21.0",
     "xregexp": "^4.3.0"
   }
 }
