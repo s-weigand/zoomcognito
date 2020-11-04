@@ -4,9 +4,13 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 export const getTheme = (): Theme => {
   let prefersDarkMode = false
   try {
-    prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+    prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark').matches
   } catch {
-    prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    try {
+      prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+    } catch (error) {
+      console.log(`ZoomCognito: Failed to get color-scheme: ${error}`)
+    }
   }
 
   const theme = createMuiTheme({
