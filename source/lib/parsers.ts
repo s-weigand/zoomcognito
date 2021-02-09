@@ -2,6 +2,8 @@ import XRegExp from 'xregexp'
 
 import { ImplementationError } from './errors'
 
+XRegExp.uninstall('namespacing')
+
 /**
  * Determines if an url is valid, to generate a zoom link
  */
