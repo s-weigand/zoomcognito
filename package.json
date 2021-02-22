@@ -46,7 +46,7 @@
     "chrome-webstore-upload-cli": "^1.2.1",
     "copy-webpack-plugin": "^7.0.0",
     "daily-version": "^2.0.0",
-    "dot-json": "^1.2.1",
+    "dot-json": "^1.2.2",
     "file-loader": "^6.2.0",
     "jest": "^25.5.4",
     "jest-webextension-mock": "^3.7.8",
