@@ -5,7 +5,9 @@
     "jsx": "react",
     "declaration": false,
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noPropertyAccessFromIndexSignature": false,
+
   },
   "include": ["source/**/*"]
 }
