@@ -9,7 +9,7 @@ const iconCopyConditions = []
 for (relIconSourcePath of relIconSourcePaths) {
   iconCopyConditions.push({
     from: relIconSourcePath,
-    to: path.posix.join(__dirname, 'distribution', 'icons', '[name].[ext]'),
+    to: path.posix.join(__dirname, 'distribution', 'icons', '[name][ext]'),
   })
 }
 
