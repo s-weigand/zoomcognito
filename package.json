@@ -44,7 +44,7 @@
     "@types/react-dom": "^17.0.8",
     "@types/xregexp": "^4.4.0",
     "chrome-webstore-upload-cli": "^1.2.1",
-    "copy-webpack-plugin": "^9.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "daily-version": "^2.0.0",
     "dot-json": "^1.2.2",
     "file-loader": "^6.2.0",
