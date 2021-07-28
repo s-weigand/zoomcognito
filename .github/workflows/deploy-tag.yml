@@ -20,6 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: node Version
+        run: node --version
+      - name: npm Version
+        run: npm --version
       - name: 'Install dependencies'
         run: npm ci
       - name: Run linting and Tests
