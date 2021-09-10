@@ -1,4 +1,4 @@
-import { Theme, createMuiTheme } from '@material-ui/core/styles'
+import { Theme, createTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 export const getTheme = (): Theme => {
@@ -13,7 +13,7 @@ export const getTheme = (): Theme => {
     }
   }
 
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       type: prefersDarkMode ? 'dark' : 'light',
     },
