@@ -6,8 +6,12 @@
     "declaration": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "noPropertyAccessFromIndexSignature": false,
-
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   },
   "include": ["source/**/*"]
 }

@@ -18,6 +18,8 @@ jobs:
         run: npm ci
       - name: Run linting and Tests
         run: npm run test:prod
+      - name: 'Test build step: update Manifest for FireFox'
+        run: npm run update_manifest_firefox
       - name: Upload dist bundle
         uses: actions/upload-artifact@v2
         with:
