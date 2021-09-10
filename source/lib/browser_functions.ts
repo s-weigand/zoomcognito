@@ -30,7 +30,7 @@ export const blockZoomClientDownload = (blockClientDownload: boolean): void => {
 export const removeIconsOnChrome = (
   contextMenueProps: Menus.CreateCreatePropertiesType,
 ): Menus.CreateCreatePropertiesType => {
-  const extensionUrl = browser.extension.getURL('/')
+  const extensionUrl = browser.runtime.getURL('/')
   if (extensionUrl.startsWith('chrome')) {
     delete contextMenueProps.icons
   }
