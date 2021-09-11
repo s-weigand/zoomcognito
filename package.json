@@ -40,8 +40,8 @@
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.8",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.8",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
     "@types/xregexp": "^4.4.0",
     "chrome-webstore-upload-cli": "^1.2.1",
     "copy-webpack-plugin": "^9.0.1",
@@ -71,9 +71,9 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "@material-ui/core": "^4.12.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "webext-options-sync": "^2.0.1",
     "webextension-polyfill-ts": "^0.26.0",
     "xregexp": "^5.1.0"
