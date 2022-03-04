@@ -19,7 +19,7 @@ jobs:
       created: ${{ steps.daily-version.outputs.created }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: node Version
         run: node --version
       - name: npm Version
