@@ -28,6 +28,6 @@ jobs:
       - name: Run web-ext lint
         run: npm run lint:web-ext
       - name: Codecov Upload
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           file: ./coverage/lcov.info
