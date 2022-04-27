@@ -1,3 +1,10 @@
+# Why is this project archived?
+
+**Zoom has issued a trademark violation against this extension and had Google remove it from the Chrome webstore.
+This also happened to [zoom-redirector](https://github.com/arkadiyt/zoom-redirector/issues/16)),
+but since this extension is used far less (less than 10 users), I decided to archive it since active development has stopped over a year ago and
+only security updates were provided.**
+
 ![ZoomCongnito icon banner](https://raw.githubusercontent.com/s-weigand/zoomcognito/main/assets/icon-banner.svg)
 
 [![codecov](https://codecov.io/gh/s-weigand/zoomcognito/branch/main/graph/badge.svg)](https://codecov.io/gh/s-weigand/zoomcognito)
